@@ -49,7 +49,8 @@ PART 2: Using ID or CLASS Selectors:
 
 */
 
-/* ↓ YOUR CSS CODE HERE ↓  */
+/* This is my CSS code I used to style the HTML document titled "A Trip to Tokyo".
+   */
 
  
   html {
@@ -61,10 +62,15 @@ PART 2: Using ID or CLASS Selectors:
     #ffffff
     );
   }
+ /* PART 1: Using the ELEMENT Selector:
+ Step 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
+ */
   body {
     margin: 1rem 5rem;
   }
-  
+  /* PART 1: Using the ELEMENT Selector:
+ Step 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.
+ */
   h1 {
     text-align: center;
     filter: drop-shadow(2px 2px 1px #0f6a9e);
@@ -73,6 +79,9 @@ PART 2: Using ID or CLASS Selectors:
     margin: 4rem auto 1rem auto;
     text-align: center;
   }
+  /* PART 1: Using the ELEMENT Selector:
+ Step 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels.
+ */
   p,  li {
     font: size 20px;
   }
@@ -83,22 +92,41 @@ PART 2: Using ID or CLASS Selectors:
   ol li {
     padding: 10px 0;
   }
+   /* PART 1: Using the ELEMENT Selector:
+ Step 4: Target all of the image elements, assign the following:
+        * margin (top, right, bottom, and left) of 1 rem
+        * border radius of 1rem 
+        * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. 
+ */
   img {
     margin: 1rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .5);
   }
+  /* PART 1: Using the ELEMENT Selector:
+ Step 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
+ */
   figcaption {
     text-align: center;
     font-weight: bold;
     color: rgb(0, 58, 66);
   }
+  /* PART 1: Using the ELEMENT Selector:
+ Step 6: Align the paragraph in the footer to the center.
+ */
   footer {
     margin: 2rem 0 2rem 0;
     text-align: center;
   }
   
-  /* ---CUSTOM CLASS NAME SELECTORS--- */
+  /* ---CUSTOM CLASS NAME SELECTORS---
+  PART 2: Using ID or CLASS Selectors: 
+* Step 1: (Line 142) Notice that there are 2 images at the top, one shorter than the other. In the HTML file, find the ID for the shorter image and give it a property of {display: none;} in the CSS file.
+* Step 2: (Line 199) Now that the shorter image is hidden, when the screen is 500 pixels or less, the shorter image needs to display once again and the longer image needs to be hidden. Go to the last MEDIA QUERY in the CSS file and add the necessary properties to make this happen. If using Chrome, use the Chrome Dev tools to check the web page's responsiveness.
+* Step 3: (Line 133) The caption for the top banner image is not under the image like it should be. Add a property to make the caption wrap under the image using flex.
+* Step 4: (Line 147) In the DIV that has the 4 images, justify the content by putting space around each image.
+* Step 5: (Line 160 & 161) Give the DIV that houses the "Top 5 Places to Visit..." a background color of rgb(0, 58, 66) and a border radius of 1 rem.
+* Step 6: (Line 149-152) The DIV that houses the "Tips and Reccs" appears to be squished when the screen size is less than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the MEDIA QUERY to understand how the DIV is behaving. */
   
   .banner-div {
     display: flex;
@@ -118,8 +146,7 @@ PART 2: Using ID or CLASS Selectors:
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
-  .tips-div {
+    .tips-div {
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
